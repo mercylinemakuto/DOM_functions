@@ -9,7 +9,7 @@ title.style.textAlign = 'center';
 title.style.marginTop = '2.5cm';
 
 const selling = document.getElementById('selling');
-selling.style.color = 'Gold';
+selling.style.color = 'Green';
 selling.style.textAlign = 'center';
 selling.style.fontSize = '20px';
 selling.style.marginTop = '1cm';
@@ -17,7 +17,7 @@ selling.style.marginTop = '1cm';
 const placeOrder = document.getElementById('place-order');
 placeOrder.style.width = '2.8cm';
 placeOrder.style.height = '1cm';
-placeOrder.style.backgroundColor = '#1B4D3E';
+placeOrder.style.backgroundColor = 'Green';
 placeOrder.style.border = 'None';
 placeOrder.style.borderRadius = '10px';
 placeOrder.style.color = 'white';
@@ -117,6 +117,8 @@ const styling = (list) => {
     list.style.listStyleType = 'none';
     list.style.flexWrap = 'wrap';
     list.style.justifyContent = 'center';
+    list.style.fontSize = '20px';
+    list.style.color = 'brown';
 
     
     list.querySelectorAll('li').forEach(item => {
@@ -134,7 +136,14 @@ styling(vegesList);
 function createNavbar() {
     const navbar = document.createElement('nav');
     navbar.className = 'navbar';
-
+    navbar.style.width = '100%';
+    navbar.style.height = '1cm';
+    navbar.style.backgroundColor = 'green';
+    navbar.style.marginLeft = '-1em';
+    navbar.style.marginRight = '-0.5em';
+    navbar.style.top = '0';
+    navbar.style.padding = '12px 12px';
+    navbar.style.position = 'fixed';
 
    
     const links = [
@@ -148,6 +157,10 @@ function createNavbar() {
     links.forEach(link => {
         const anchor = document.createElement('a');
         anchor.href = link.href;
+        anchor.style.marginLeft = '8cm';
+        anchor.style.textDecoration = 'None';
+        anchor.style.fontSize = '25px';
+        anchor.style.color = 'white';
         anchor.textContent = link.name;
         navbar.appendChild(anchor);
     });
@@ -159,30 +172,45 @@ function createNavbar() {
 
 createNavbar();
 
-const back = document.getElementById('fruits');
-const newBack = document.createElement('img');
-newBack.src = 'images/background.jpg';
-newBack.style.width = '100%';
-newBack.style.height = '100vh';
-// newBack.style.display = 'block';
-back.appendChild(newBack); 
+
+const styleElements = () => {
+    const fruitInput = document.getElementById('newFruit');
+    const addButton = document.getElementById('addNew');
+
+    
+    fruitInput.style.display = 'block';
+    fruitInput.style.margin = '20px auto';
+    fruitInput.style.width = '5cm'; 
+    fruitInput.style.height = '1cm'; 
+    fruitInput.style.border = 'none'; 
+    fruitInput.style.outline = 'none'; 
+    fruitInput.style.borderRadius = '5px'; 
+    fruitInput.style.backgroundColor = '#f0f0f0'; 
+
+    addButton.style.display = 'block';
+    addButton.style.margin = '20px auto'; 
+    addButton.style.width = '3cm'; 
+    addButton.style.height = '1cm'; 
+    addButton.style.border = 'none';
+    addButton.style.outline = 'none'; 
+    addButton.style.borderRadius = '5px'; 
+    addButton.style.backgroundColor = 'Green'; 
+    addButton.style.color = 'white'; 
+    addButton.style.cursor = 'pointer'; 
 
 
-const texting = document.getElementById("welcoming");
-texting.style.position = "absolute";
-texting.style.top = "250px";
-texting.style.left = "500px";
-texting.style.color = "white";
-texting.style.fontSize = "24px";
-texting.style.fontWeight = "bold";
-texting.style.background = "rgb(175, 235, 175)";
-texting.style.padding = "40px";
-texting.style.borderRadius = "30px";
-texting.style.textAlign = "center";
-texting.style.textShadow = "2px 2px 4px rgba(146, 120, 120, 0.7)"; 
-texting.style.boxShadow = "2px 2px 10px rgba(0, 0, 0, 0.5)";
+    addButton.addEventListener('click', () => {
+        addButton.style.backgroundColor = '#FFC72C'; 
+        addButton.textContent = 'Added!'
+    });
+    addButton.addEventListener('click', () => {
+        addButton.style.backgroundColor = '#FFC72C'; 
+        addButton.textContent = 'Added!'
+    });
+};
 
 
+styleElements();
 
 
 
