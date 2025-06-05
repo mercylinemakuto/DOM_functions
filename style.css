@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4D4DDB;
+    padding: 10px 0;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+#navbar a:hover {
+    background-color: #3b3bdb;
+}
+
+
